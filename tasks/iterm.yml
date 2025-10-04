@@ -1,0 +1,27 @@
+---
+- name: Clone Oh My Zsh repository.
+  git:
+    repo: https://github.com/ohmyzsh/ohmyzsh.git
+    dest: "{{ ansible_env.HOME }}/.oh-my-zsh/"
+    version: master
+    update: true
+
+- name: Clone Oh My Zsh plugins.
+  git:
+    repo: "{{ item.repo }}"
+    dest: "{{ item.dest }}"
+    version: master
+    update: true
+  with_items:
+    - repo: https://github.com/zsh-users/zsh-autosuggestions.git
+      dest: "{{ ansible_env.HOME }}/.oh-my-zsh/custom/plugins/zsh-autosuggestions/"
+    - repo: https://github.com/zsh-users/zsh-syntax-highlighting.git
+      dest: "{{ ansible_env.HOME }}/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/"
+
+- name: Clone p10k repository.
+  git:
+    repo: https://github.com/romkatv/powerlevel10k.git
+    dest: "{{ ansible_env.HOME }}/.oh-my-zsh/custom/themes/powerlevel10k/"
+    version: master
+    update: true
+    depth: 1
