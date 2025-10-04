@@ -4,13 +4,13 @@ name: CI
   pull_request:
     paths-ignore:
       - '*.md' # Markdown docs need no linting/testing etc.
-  push:
-    paths-ignore:
-      - '*.md'
-    branches:
-      - master
-  schedule:
-    - cron: "0 5 * * 4"
+  # push:
+  #   paths-ignore:
+  #     - '*.md'
+  #   branches:
+  #     - master
+  # schedule:
+  #   - cron: "0 5 * * 4"
 
 jobs:
 
