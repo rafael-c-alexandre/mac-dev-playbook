@@ -1,0 +1,27 @@
+---
+- name: Check if SDKMAN is already installed.
+  stat:
+    path: "{{ ansible_env.HOME }}/.sdkman/bin/sdkman-init.sh"
+  register: sdkman_stat
+
+- name: Install SDKMAN.
+  when: not sdkman_stat.stat.exists
+  block:
+    - name: Download SDKMAN install script.
+      get_url:
+        url: "https://get.sdkman.io?ci=true"
+        dest: "/tmp/install_sdkman.sh"
+        mode: "0755"
+      when: not sdkman_stat.stat.exists
+
+    - name: Run SDKMAN installer.
+      command: "/bin/bash /tmp/install_sdkman.sh"
+
+- name: Install SDKMAN java versions.
+  shell: |
+    source $HOME/.sdkman/bin/sdkman-init.sh
+    sdk install java {{ item }}
+  args:
+    executable: /bin/bash
+  with_items: "{{ sdkman_java_versions }}"
+  changed_when: false

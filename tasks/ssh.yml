@@ -1,0 +1,4 @@
+---
+- name: Generate a default OpenSSH keypair with the default values (4096 bits, rsa).
+  community.crypto.openssh_keypair:
+    path: "{{ ansible_env.HOME }}/.ssh/sshkey"
