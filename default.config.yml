@@ -124,3 +124,9 @@ sublime_package_control:
 
 # Glob pattern to ansible task files to run after all other tasks are finished.
 post_provision_tasks: []
+
+configure_ssh: false
+
+configure_sdkman: false
+# Java versions to install through SDKMAN.
+sdkman_java_versions: []

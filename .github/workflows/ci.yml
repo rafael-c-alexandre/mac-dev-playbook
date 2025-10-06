@@ -39,7 +39,7 @@ jobs:
       matrix:
         os:
           - macos-15
-          - macos-14
+          - macos-26
 
     steps:
       - name: Check out the codebase.
