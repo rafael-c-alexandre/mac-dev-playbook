@@ -28,6 +28,7 @@
 
   tasks:
     - import_tasks: tasks/iterm.yml
+      tags: ['iterm']
 
     - import_tasks: tasks/sudoers.yml
       when: configure_sudoers
@@ -48,6 +49,12 @@
       when: configure_sublime
       tags: ['sublime-text']
 
+    - import_tasks: tasks/ssh.yml
+      tags: ['ssh']
+
+    - import_tasks: tasks/sdkman.yml
+      tags: ['sdkman']
+
     - name: Run post-provision task files in a block.
       tags: ['post']
       block:
@@ -56,5 +63,3 @@
           loop_control:
             loop_var: outer_item
           with_fileglob: "{{ post_provision_tasks | default(omit) }}"
-
-# iterm profile???
