@@ -1,6 +1,7 @@
 ---
 - name: Configure host.
   hosts: all
+  become: false
 
   vars_files:
     - default.config.yml
