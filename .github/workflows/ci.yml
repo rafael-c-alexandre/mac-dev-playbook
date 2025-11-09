@@ -9,6 +9,7 @@ name: CI
       - '*.md'
     branches:
       - master
+  workflow_dispatch:
 
 jobs:
 
