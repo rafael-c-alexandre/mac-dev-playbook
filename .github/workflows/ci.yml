@@ -26,7 +26,7 @@ jobs:
           python-version: '3.x'
 
       - name: Install test dependencies.
-        run: pip3 install --upgrade ansible-core yamllint ansible ansible-lint
+        run: pip3 install ansible-core==2.20.0 yamllint ansible ansible-lint
 
       - name: Lint code.
         run: |
