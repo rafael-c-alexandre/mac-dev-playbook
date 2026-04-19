@@ -1,6 +1,7 @@
 ---
 homebrew_installed_packages:
   - autoconf
+  - bash
   - bash-completion
   - gettext
   - sqlite
