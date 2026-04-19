@@ -5,9 +5,4 @@ roles:
 
 collections:
   - name: geerlingguy.mac
-<<<<<<< Updated upstream
-#  - name: community.general
-#    version: "*"
-=======
   - name: community.crypto
->>>>>>> Stashed changes

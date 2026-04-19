@@ -11,7 +11,7 @@
       get_url:
         url: "https://get.sdkman.io?ci=true"
         dest: "/tmp/install_sdkman.sh"
-        mode: "0755"
+        mode: 0755
       when: not sdkman_stat.stat.exists
 
     - name: Run SDKMAN installer.
