@@ -36,6 +36,7 @@ This playbook installs and configures most of the software I use on my Mac for w
   2. go to Appearance -> General -> Theme: minimal
   3. go to Profiles -> Text -> Font and change to `MesloGLS NF`.
 2. In Finder, go to Settings -> Sidebar, enable the home folder and remove tags.
+3. Add Downloads folder to the dock.
 
 ### Use with a remote Mac
 
