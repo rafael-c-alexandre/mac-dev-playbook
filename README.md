@@ -18,14 +18,8 @@ This playbook installs and configures most of the software I use on my Mac for w
   3. Clone or download this repository to your local drive.
   4. Run `ansible-galaxy install -r requirements.yml` inside this directory to install required Ansible roles.
   5. Copy custom config from Bitwarden to ./config.yml.
-  6. Navigate to ${HOME}/.ansible/collections/ansible_collections/geerlingguy/mac/roles/mas/tasks/main.yml and add the following snippet in the "Ensure configured MAS apps are installed." task:
-  ```yaml
-    register: mas_result
-    retries: 3
-    delay: 10
-    until: mas_result is succeeded
-  ```
   7. Run `ansible-playbook main.yml --ask-become-pass` inside this directory. Enter your macOS account password when prompted for the 'BECOME' password.
+  8. Add e-mail configuration on the Apple Mail app.
   
 > Note: If some Homebrew commands fail, you might need to agree to Xcode's license or fix some other Brew issue. Run `brew doctor` to see if this is the case.
 
@@ -37,6 +31,9 @@ This playbook installs and configures most of the software I use on my Mac for w
   3. go to Profiles -> Text -> Font and change to `MesloGLS NF`.
 2. In Finder, go to Settings -> Sidebar, enable the home folder and remove tags.
 3. Add Downloads folder to the dock.
+4. Go to System Settings,
+  1. search for "Trackpad", then on the "Point & Click" section, check "Tap to click".
+  2. search for "Sound", then uncheck "Play sound on startup"
 
 ### Use with a remote Mac
 
