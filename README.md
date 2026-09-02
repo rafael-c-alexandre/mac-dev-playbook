@@ -34,6 +34,7 @@ This playbook installs and configures most of the software I use on my Mac for w
 4. Go to System Settings,
   1. search for "Trackpad", then on the "Point & Click" section, check "Tap to click".
   2. search for "Sound", then uncheck "Play sound on startup"
+  3. sewrch for "Percentage", thr. on "Show battery percentage in the menu bar", then on the battery row click on "Battery Options" and check "Show Percentage".
 5. Add any necessary ssh keys.
 6. Add iStat configurations.
 
